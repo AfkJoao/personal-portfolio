@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de João Perdigão - Analista de Dados e Analista de Sistemas.">
+    <title>João Perdigão | Portfolio</title>
+    <!-- importando a fonte oficial pra nao desconfigurar em monitores diferentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+    <!-- tela de loading/intro rápida -->
+    <div id="intro" aria-hidden="true">HELLO</div>
+
+    <!-- texto gigante que fica rolando no fundo -->
+    <div class="scrolling-name" id="bg-name" aria-hidden="true">JOÃO PERDIGÃO — SYSTEMS ANALYST — DATA ANALYST — JOÃO PERDIGÃO</div>
+
+    <!-- modalzinho q segue o mouse nos projetos (só pc) -->
+    <div id="hover-preview" aria-hidden="true">
+        <img src="" id="preview-img" alt="">
+        <div id="preview-text" data-i18n="view_btn">VISUALIZAR</div>
+    </div>
+
+    <!-- navbar -->
+    <header>
+        <div class="brand" aria-label="João Perdigão Home">João Perdigão</div>
+        <nav class="nav-links" aria-label="Menu Principal">
+            <button class="nav-btn" onclick="scrollToID('about')" data-i18n="nav_about">About</button>
+            <button class="nav-btn" onclick="scrollToID('work')" data-i18n="nav_work">Work</button>
+            <button class="nav-btn" onclick="scrollToID('tech')" data-i18n="nav_tech">Tech</button>
+            <button class="nav-btn" onclick="scrollToID('contact')" data-i18n="nav_contact">Contact</button>
+            
+            <div class="nav-divider" aria-hidden="true"></div>
+            
+            <!-- botoes de tema e idioma -->
+            <button id="lang-btn" class="nav-btn toggle-btn" aria-label="Mudar idioma">EN</button>
+            <button id="theme-btn" class="nav-btn toggle-btn" aria-label="Mudar tema">☀</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- secao inicial -->
+        <section id="hero" aria-label="Introdução">
+            <div class="reveal reveal-left">
+                <h1 class="hero-title" data-i18n="hero_title">DATA & SYSTEMS<br>ANALYST.</h1>
+                <p class="hero-desc" data-i18n="hero_desc">
+                    Sou João Perdigão. Transformo dados complexos em soluções simples e otimizo sistemas para gerar valor real.
+                </p>
+            </div>
+        </section>
+
+        <!-- sobre mim -->
+        <section id="about" aria-label="Sobre Mim">
+            <div class="about-grid reveal reveal-up">
+                <div class="about-big" data-i18n="about_title">Mais do que código,<br>construo soluções.</div>
+                <div class="about-small" data-i18n="about_text">
+                    Minha jornada começou com a curiosidade de entender como as coisas funcionam. Hoje, uno a lógica da <strong>Análise de Dados</strong> com a visão estratégica da <strong>Análise de Sistemas</strong>.<br><br>
+                    Foco em performance, automação de processos repetitivos (Python/VBA) e dashboards que contam histórias (Power BI).
+                </div>
+            </div>
+        </section>
+
+        <!-- lista de trampos -->
+        <section id="work" aria-label="Projetos Selecionados">
+            <h2 class="reveal reveal-left section-title" data-i18n="work_header">Projetos Selecionados</h2>
+            
+            <div class="project-list" role="list">
+                
+                <!-- projeto 1 -->
+                <div class="project-item reveal reveal-right" 
+                     role="listitem"
+                     data-image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+                     onclick="window.open('https://google.com', '_blank')"
+                     tabindex="0"> 
+                    <div class="p-info">
+                        <h3 data-i18n="p1_title">Financial Dashboard</h3>
+                        <span>Power BI • SQL • DAX</span>
+                    </div>
+                    <div class="arrow-icon" aria-hidden="true">→</div>
+                </div>
+
+                <!-- projeto 2 -->
+                <div class="project-item reveal reveal-right" 
+                     role="listitem"
+                     data-image="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop"
+                     onclick="window.open('#', '_blank')"
+                     tabindex="0">
+                    <div class="p-info">
+                        <h3 data-i18n="p2_title">Cost Automation</h3>
+                        <span>Python • Pandas • SAP</span>
+                    </div>
+                    <div class="arrow-icon" aria-hidden="true">→</div>
+                </div>
+
+                <!-- projeto 3 -->
+                <div class="project-item reveal reveal-right" 
+                     role="listitem"
+                     data-image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
+                     onclick="window.open('#', '_blank')"
+                     tabindex="0">
+                    <div class="p-info">
+                        <h3 data-i18n="p3_title">Data Warehouse</h3>
+                        <span>Azure • ETL • SQL</span>
+                    </div>
+                    <div class="arrow-icon" aria-hidden="true">→</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- stack -->
+        <section id="tech" aria-label="Tecnologias">
+            <h2 class="reveal reveal-left section-title" data-i18n="tech_header">Tecnologias</h2>
+            <div class="tech-grid reveal reveal-up">
+                
+                <div class="tech-card" title="Python">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                    <div>Python</div>
+                </div>
+
+                <div class="tech-card" title="Power BI">
+                    <img src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-BI.svg" alt="Power BI">
+                    <div>Power BI</div>
+                </div>
+
+                <div class="tech-card" title="Excel">
+                    <img src="https://cdn.simpleicons.org/microsoftexcel/217346" alt="Excel">
+                    <div>Excel</div>
+                </div>
+
+                <div class="tech-card" title="PostgreSQL">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                    <div>PostgreSQL</div>
+                </div>
+
+                <div class="tech-card" title="SAP">
+                    <img src="https://cdn.simpleicons.org/sap/008FD3" alt="SAP">
+                    <div>SAP ERP</div>
+                </div>
+
+                <div class="tech-card" title="JavaScript">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    <div>JavaScript</div>
+                </div>
+
+                <div class="tech-card" title="HTML5">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                    <div>HTML5</div>
+                </div>
+
+                <div class="tech-card" title="CSS3">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                    <div>CSS3</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contatos (preencher dados dps) -->
+        <section id="contact" aria-label="Contato">
+            <h1 class="reveal reveal-left section-title-big" data-i18n="contact_title">Vamos trabalhar<br>juntos?</h1>
+            <div class="contact-row reveal reveal-up">
+                <a href="https://wa.me/55DDDNUMERO" target="_blank" class="contact-btn" aria-label="WhatsApp">WhatsApp</a>
+                <a href="https://github.com/SEUGITHUB" target="_blank" class="contact-btn" aria-label="GitHub">GitHub</a>
+                <a href="mailto:SEUEMAIL@gmail.com" class="contact-btn" aria-label="Email">Email</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- barra fixa em baixo -->
+    <footer class="bottom-bar">
+        <div class="widget-pill" title="Previsão do Tempo">
+            <div class="rain-dot" id="rain-dot" aria-hidden="true"></div>
+            <div>
+                <div id="rain-text" style="font-weight: 700;">...</div>
+                <div id="weather-detail" style="font-size: 0.75rem; opacity: 0.7;" data-i18n="rain_label">Previsão</div>
+            </div>
+        </div>
+
+        <div class="copyright">© 2026 João Perdigão</div>
+
+        <div class="widget-pill" title="Horário e Local">
+            <div class="globe-wrap" aria-hidden="true"><div class="globe-img"></div></div>
+            <span id="loc-city" style="font-weight: 600;">Carregando...</span>
+            <span style="opacity: 0.3;" aria-hidden="true">|</span>
+            <span id="clock" style="font-variant-numeric: tabular-nums;">00:00</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
