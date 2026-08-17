@@ -15,7 +15,7 @@ if (window.matchMedia("(hover: hover)").matches) {
         mouseY = e.clientY;
     });
 
-    // lerp bolado pra interpolar o movimento
+    // lerp bolado pra interpolar o movimento e ficar suave
     function animate() {
         cursorX += (mouseX - cursorX) * speed;
         cursorY += (mouseY - cursorY) * speed;
@@ -31,7 +31,7 @@ if (window.matchMedia("(hover: hover)").matches) {
     }
     animate();
 
-    // handlers dos links
+    // handlers dos links pros projetos
     projectItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
             isHovering = true;
@@ -95,7 +95,7 @@ const translations = {
         about_title: "Mais do que código,<br>construo soluções.",
         about_text: "Minha jornada começou com a curiosidade de entender como as coisas funcionam. Hoje, uno a lógica da <strong>Análise de Dados</strong> com a visão estratégica da <strong>Análise de Sistemas</strong>.<br><br>Foco em performance, automação de processos repetitivos (Python/VBA) e dashboards que contam histórias (Power BI).",
         work_header: "Projetos Selecionados",
-        p1_title: "Dashboard Financeiro", p2_title: "Automação de Custos", p3_title: "Data Warehouse",
+        p1_title: "Sales Intelligence", p2_title: "Automação de Custos", p3_title: "Data Warehouse",
         tech_header: "Tecnologias", contact_title: "Vamos trabalhar<br>juntos?",
         rain_label: "Previsão", rain_yes: "Leve guarda-chuva", rain_no: "Sem chuva",
         view_btn: "VISUALIZAR"
@@ -107,7 +107,7 @@ const translations = {
         about_title: "More than code,<br>I build solutions.",
         about_text: "My journey began with a curiosity to understand how things work. Today, I combine the logic of <strong>Data Analytics</strong> with the strategic vision of <strong>Systems Analysis</strong>.<br><br>Focused on performance, automation of repetitive processes (Python/VBA), and dashboards that tell stories (Power BI).",
         work_header: "Selected Projects",
-        p1_title: "Financial Dashboard", p2_title: "Cost Automation", p3_title: "Data Warehouse",
+        p1_title: "Sales Intelligence", p2_title: "Cost Automation", p3_title: "Data Warehouse",
         tech_header: "Technologies", contact_title: "Let's work<br>together?",
         rain_label: "Forecast", rain_yes: "Take an umbrella", rain_no: "No rain",
         view_btn: "VIEW"
@@ -133,7 +133,7 @@ function updateText() {
     });
 }
 
-// parallax levinho no background
+// parallax levinho no background do nome
 const bgName = document.getElementById('bg-name');
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
